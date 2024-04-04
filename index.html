@@ -1,12 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="/index.css">
-</head>
-<body>
-    
-</body>
+    <link rel="stylesheet" href="/index.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <div class="header__content">
+          <div class="header__logo">
+            <h2 class="header__title">KomArticle</h2>
+            <div class="header__logo-img">
+              <a href="" class="header__logo-link">
+                <img src="/image/search.svg" alt="" />
+              </a>
+              <a href="" class="header__logo-link">
+                <img src="/image/Group 1.svg" alt="" />
+              </a>
+              <div class="header__burger">
+                <span></span>
+              </div>
+            </div>
+            <div class="header__burger-card">
+              <div class="header__burger-text">
+                <a
+                  href="./Favorite/newsFavorites.html"
+                  class="header__burger-title"
+                  >Мои Избранные</a
+                >
+                <a href="" class="header__burger-subtitle">Выйти</a>
+              </div>
+            </div>
+          </div>
+          <div class="header__text-">
+            <h3 class="header__title-news">Новости</h3>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="main">
+      <div class="container">
+        <div class="main__wrapper">
+          <div class="main__filter">
+            <h2 class="main__text-filter">Фильтрация</h2>
+            <div class="main__box-option">
+              <div class="main__option">
+                <input type="checkbox" />
+                <h8 class="main__checkbox-text">Спорт</h8>
+              </div>
+              <div class="main__option">
+                <input type="checkbox" />
+                <h8 class="main__checkbox-text">Политика</h8>
+              </div>
+              <div class="main__option">
+                <input type="checkbox" />
+                <h8 class="main__checkbox-text">Звезды</h8>
+              </div>
+              <div class="main__option">
+                <input type="checkbox" />
+                <h8 class="main__checkbox-text">Искусство</h8>
+              </div>
+              <div class="main__option">
+                <input type="checkbox" />
+                <h8 class="main__checkbox-text">Мода </h8>
+              </div>
+            </div>
+            <div class="main__btn-box">
+
+              <button class="main__btn">Применить</button>
+              <button class="main__btn-text">Отменить</button>
+            </div>
+          </div>
+          <div class="main__menu">
+            <div class="main__content-card">
+              <div class="main__block1">
+                <img class="main__img" src="${item.image}" alt="" />
+                <div class="main__card-info">
+                  <div class="main__data">
+                    <h4 class="main__menu-title">${item.date}</h4>
+                    <img src="./image/heart.svg" alt="" />
+                  </div>
+                  <h4 class="main__menu-news">${item.title}</h4>
+                  <span class="main__menu-span">${item.text}</span>
+                  <div class="main__shaire-link">
+                    <a href="./read.html">Читать дальше</a>
+                  </div>
+                  <a href="">
+                    <img src="image/share-2.svg" class="main__shaire" alt="" />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="footer">
+      <h3 class="footer__title">KomArticle</h3>
+      <div class="footer__profile">
+        <h3 class="footer__subtitle">Мой профиль</h3>
+        <h3 class="footer__span">Избранные новости</h3>
+      </div>
+    </footer>
+    <script src="./index.js"></script>
+  </body>
 </html>

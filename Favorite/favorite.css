@@ -1,0 +1,160 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "ubuntu";
+}
+
+.container {
+  /* border: 1px solid black; */
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.header__img {
+  padding-top: 25px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+.header__burger {
+  margin-top: 4px;
+  /* margin-top: 5px; */
+  cursor: pointer;
+  display: flex;
+  position: relative;
+  z-index: 50;
+  align-items: center;
+  justify-content: flex-end;
+  width: 30px;
+  height: 18px;
+}
+.header__burger span {
+  height: 2px;
+  width: 100%;
+  transform: scale(1);
+  background-color: #50abff;
+}
+.header__burger::before,
+.header__burger::after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  background-color: #50abff;
+  transition: all 0.3s ease 0s;
+}
+.header__burger::before {
+  top: 0px;
+}
+.header__burger::after {
+  bottom: 0;
+}
+.header__burger.active span {
+  transform: scale(0);
+}
+.header__burger.header__burger.active {
+  cursor: pointer;
+  top: 23px; /* Новое значение для корректного положения крестика по вертикали */
+  /* Центрирование крестика по горизонтали */
+  transform: rotate(-45deg) translate(50%, -50%);
+}
+.header__burger.active::after {
+  bottom: 90%;
+  transform: rotate(90deg) translate(0, 45%);
+}
+.header__burger-card {
+  display: none;
+  padding: 15px;
+  /* text-align: center; */
+  top: 70px;
+  right: 150px;
+  width: 176px;
+  height: 59px;
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 15px;
+  position: absolute;
+}
+.header__burger-card.open {
+  display: flex !important;
+}
+
+.header__burger-subtitle {
+  text-decoration: none;
+  color: black;
+  font-size: 26px;
+  font-weight: 400;
+  line-height: 24px;
+  cursor: pointer;
+  padding-left: 30px;
+}
+.header__burger-subtitle:hover {
+  color: #50abff;
+  scale: 1.1;
+  transition: 0.3s;
+}
+.header__favorites {
+  padding-top: 52px;
+}
+@media (min-width: 320px) and (max-width: 375px) {
+  .main__img {
+    width: 317px;
+    height: 262px;
+  }
+  .header__img {
+    padding-right: 20px;
+  }
+  .header__img-title {
+    padding-right: 40px;
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 28.73px;
+    color: #50abff;
+  }
+  .header__burger-card {
+    left: 120px;
+  }
+  .header__favorites {
+    padding-bottom: 20px;
+  }
+  .footer {
+    height: 150px;
+    width: 320px;
+    background-color: black;
+  }
+}
+
+.footer__title {
+  color: #50abff;
+  font-size: 25px;
+  font-weight: 700;
+  line-height: 28.73px;
+  text-align: center;
+  padding-top: 20px;
+}
+.footer__profile {
+  display: flex;
+  color: white;
+  justify-content: center;
+  gap: 20px;
+  padding-top: 40px;
+  font-size: 15px;
+}
+
+.footer {
+  height: 150px;
+  background-color: black;
+}
+.main__block1 {
+  display: flex;
+}
+.main__img {
+  width: 255px;
+  height: 200px;
+  margin-bottom: 50px;
+}
+.main__menu {
+  margin-top: 50px;
+}

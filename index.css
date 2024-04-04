@@ -1,0 +1,319 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "ubuntu";
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.header {
+  background-image: url("./image/image\ 3.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 240px;
+}
+.header__logo {
+  padding-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 900px;
+}
+.header__logo-img {
+  display: flex;
+  gap: 20px;
+}
+.header__title {
+  color: #50abff;
+  font-size: 25px;
+}
+.header__title-news {
+  font-size: 72px;
+  font-weight: 500;
+  line-height: 82.73px;
+  text-align: center;
+  color: white;
+}
+.header__burger {
+  cursor: pointer;
+  display: flex;
+  position: relative;
+  z-index: 50;
+  align-items: center;
+  justify-content: flex-end;
+  width: 30px;
+  height: 18px;
+}
+.header__burger span {
+  height: 2px;
+  width: 100%;
+  transform: scale(1);
+  background-color: white;
+}
+.header__burger::before,
+.header__burger::after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  background-color: white;
+  transition: all 0.3s ease 0s;
+}
+.header__burger::before {
+  top: 0;
+}
+.header__burger::after {
+  bottom: 0;
+}
+.header__burger.active span {
+  transform: scale(0);
+}
+.header__burger.header__burger.active {
+  top: 50%;
+  transform: rotate(-45deg) translate(0, -50%);
+}
+.header__burger.active::after {
+  bottom: 90%;
+  transform: rotate(90deg) translate(0, 45%);
+}
+.header__burger-card {
+  display: none;
+  padding: 15px;
+  text-align: center;
+  top: 70px;
+  right: 150px;
+  width: 176px;
+  height: 89px;
+  background-color: white;
+  border-radius: 15px;
+  position: absolute;
+}
+.header__burger-card.open {
+  display: flex !important;
+}
+.header__burger-title {
+  opacity: 0.6;
+  color: black;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  cursor: pointer;
+  padding-top: 30px;
+  border-bottom: 2px solid black;
+}
+.header__burger-subtitle {
+  text-decoration: none;
+  color: black;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  cursor: pointer;
+}
+.footer {
+  height: 199px;
+  background-color: black;
+}
+
+.footer__title {
+  color: #50abff;
+  font-size: 25px;
+  font-weight: 700;
+  line-height: 28.73px;
+  text-align: center;
+  padding-top: 20px;
+}
+.footer__profile {
+  display: flex;
+  color: white;
+  justify-content: center;
+  gap: 20px;
+  padding-top: 40px;
+}
+.main__wrapper {
+  display: flex;
+  gap: 199px;
+  margin-top: 50px;
+}
+.main__filter {
+}
+.main__filter > .main__box-option > .main__option {
+  padding: 13px;
+}
+.main__block1 {
+  gap: 50px;
+  display: flex;
+  /* border: 1px solid black; */
+  border-bottom: 1px solid gray;
+}
+.main__menu-news {
+  font-family: Ubuntu;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 27.58px;
+  text-align: left;
+}
+.main__menu-span {
+  font-family: Ubuntu;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  /* text-align: left; */
+  padding-top: 8px;
+}
+.main__data {
+  display: flex;
+  align-items: center;
+  gap: 445px;
+}
+.main__menu-title {
+  font-family: Ubuntu;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: left;
+}
+.main__shaire-link {
+  padding-top: 8px;
+}
+.main__shaire {
+  padding-top: 35px;
+}
+.main__btn {
+  background-color: #50abff;
+  border: none;
+  border-radius: 10px;
+  width: 100px;
+  height: 30px;
+  color: white;
+}
+
+@media (min-width: 320px) and (max-width: 375px) {
+  .main__filter {
+    display: none;
+  }
+  .header {
+    width: 360px;
+    height: 163px;
+  }
+  .header__logo {
+    gap: 80px;
+  }
+  .main__wrapper {
+    flex-direction: column;
+  }
+  .filter-img {
+    padding-left: 330px;
+    padding-top: 30px;
+  }
+  .main__block1 {
+    width: 300px;
+    height: 670px;
+    /* border: 1px solid #ccc; */
+    overflow: hidden;
+    word-wrap: break-word;
+    display: flex;
+    flex-direction: column;
+    margin-left: 35px;
+  }
+  .footer {
+    height: 150px;
+    width: 363px;
+  }
+  .main__text-filter {
+    text-align: center;
+  }
+  .filter-text {
+    padding-top: 20px;
+    margin-left: 70px;
+    line-height: 40px;
+    font-size: 16px;
+    font-weight: 400;
+  }
+  .filter__btn-text {
+    background-color: #50abff;
+    border: none;
+    border-radius: 10px;
+    width: 100px;
+    height: 30px;
+    color: white;
+  }
+  .header__burger-card {
+    left: 160px;
+  }
+  .header__title-news {
+    font-size: 45px;
+  }
+  .open-card {
+    display: flex !important;
+    flex-direction: column;
+  }
+  .filter-img {
+    display: flex;
+  }
+}
+
+.filter-card {
+  position: absolute;
+  width: 222px;
+  height: 300px;
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 15px;
+  left: 130px;
+  display: none;
+  transition: 0.3s;
+}
+.main__img {
+  height: 200px;
+  width: 300px;
+}
+.main__errow {
+  padding-top: 24px;
+}
+.main__date-like {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 24px;
+}
+.main__title {
+  padding-top: 24px;
+}
+.main__span-subtitle {
+  padding-top: 24px;
+  opacity: 0.5;
+}
+.main__span-subtitle2 {
+  padding-top: 30px;
+  display: flex;
+  flex-direction: column;
+}
+.main__share {
+  padding: 20px;
+}
+.main__comment {
+  padding: 20px;
+  font-size: 30px;
+}
+.main__date-res {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+}
+.main__coment-input {
+  display: flex;
+  gap: 25px;
+  padding: 20px;
+}
+.main__btn-text {
+  background-color: #50abff;
+  border: none;
+  border-radius: 10px;
+  width: 100px;
+  height: 30px;
+  color: white;
+  margin-top: 10px;
+}
